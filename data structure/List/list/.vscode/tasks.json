@@ -1,0 +1,32 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 构建 union(含seqlist)",
+            "command": "E:\\Software_Install\\mingw64\\bin\\g++.EXE",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "${workspaceFolder}\\union.cpp",
+                "${workspaceFolder}\\seqlist.cpp",
+                "-o",
+                "${workspaceFolder}\\output\\union.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
