@@ -83,7 +83,12 @@ bool Linklist_delete(Linklist &L,elemtype i,elemtype &e)//删除元素
 bool Linklist_DeleteElem(Linklist &L,elemtype e)//输入要删除的元素
 {
     Linklist p=L,q=L;
-    while(p&&p->data!=e){
+    while(p){
+        if(p->data==e){
+            q->next=p->next;
+            delete p;
+            Linklist p=q->next;
+        }
         q=p;
         p=p->next;
     }
@@ -91,8 +96,6 @@ bool Linklist_DeleteElem(Linklist &L,elemtype e)//输入要删除的元素
         cout<<"列表没有该元素"<<endl;
         return false;
     }
-    q->next=p->next;
-    delete p;
     return true;
 }
 
